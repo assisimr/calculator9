@@ -24,15 +24,8 @@ def division(a, b):
     c = a / b
     return c
 
-def square(a):
-    a = int(a)
-    c = square(a)
-    return c
 
-def square_root(a):
-    a = int(a)
-    c = square_root(a)
-    return c
+
 
 class Calculator:
     result = 0
@@ -57,13 +50,8 @@ class Calculator:
         self.result = division(a, b)
         return self.result
 
-    def square(self, a):
-        self.result = square(a)
-        return self.result
 
-    def square_root(self, a):
-        self.result = square_root(a)
-        return self.result
+
 
 class CSVStats(Calculator):
     data = []

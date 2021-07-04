@@ -33,13 +33,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.divide(4, 2), 2)
         self.assertEqual(self.calculator.result, 2)
 
-    def test_square_method_calculator(self):
-        self.assertEqual(self.calculator.square(3), 9)
-        self.assertEqual(self.calculator.result, 9)
 
-    def test_square_root_method_calculator(self):
-        self.assertEqual(self.calculator.square_root(4), 2)
-        self.assertEqual(self.calculator.result, 2)
+
 
     def test_results_property_calculator(self):
         self.assertEqual(self.calculator.result, 0)
