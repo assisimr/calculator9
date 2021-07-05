@@ -34,12 +34,15 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_square_method_calculator(self):
-        test_data = CsvReader('/src/square.csv').data
+        self.assertEqual(self.calculator.square(3), 9)
+        self.assertEqual(self.calculator.result, 9)
+
+
+    def test_square_root_method_calculator(self):
+        test_data = CsvReader('/src/square_root.csv').data
         for row in test_data:
-            self.assertEqual(self.calculator.square(row['Value']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
-
-
+            self.assertEqual(self.calculator.square_root(row['Value']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
 
 
     def test_results_property_calculator(self):
