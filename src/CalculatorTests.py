@@ -24,16 +24,15 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_multiply_method_calculator(self):
-        test_data = CsvReader('/src/multiplication.csv').data
-        for row in test_data:
-            self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
+        self.assertEqual(self.calculator.multiply(4, 2), 8)
+        self.assertEqual(self.calculator.result, 8)
+
 
     def test_divide_method_calculator(self):
-        self.assertEqual(self.calculator.divide(4, 2), 2)
-        self.assertEqual(self.calculator.result, 2)
-
-
+        test_data = CsvReader('/src/division.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertEqual(self.calculator.result, float(row['Result']))
 
 
     def test_results_property_calculator(self):
