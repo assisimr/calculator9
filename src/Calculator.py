@@ -1,3 +1,5 @@
+import math
+
 from CsvReader import CsvReader
 
 def addition(a, b):
@@ -24,6 +26,10 @@ def division(a, b):
     c = a / b
     return c
 
+def square(a):
+    a = int(a)
+    c = a ** 2
+    return c
 
 
 
@@ -50,6 +56,9 @@ class Calculator:
         self.result = division(a, b)
         return self.result
 
+    def square(self, a):
+        self.result = square(a)
+        return self.result
 
 
 
